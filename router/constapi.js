@@ -8,8 +8,8 @@ function route (req, res) {
   let { type, start, end } = req.query
 
   // Parameter Check
-  if (!type) return res.send('ERROR: type parameter is not exist')
-  if (start < 0 || end < 0) return res.send('ERROR: are you crazy?')
+  if (!type) return res.send('ERROR: type parameter does not exist')
+  if (start < 0 || end < 0) return res.send('ERROR: start & end parameter cant be a negative integer')
 
   type = type.toUpperCase()
   start = parseInt(start || 0)
