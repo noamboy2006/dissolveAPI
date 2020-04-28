@@ -20,7 +20,7 @@ app.get('/api/meme', memeRouter)
 
 app.use(fallback)
 
-app.listen(80)
+app.listen(8080)
 
 client.on('ready', () => {
   console.log('I am ready!')
@@ -30,4 +30,3 @@ client.on('message', message => {
   memelist.url.push(message.attachments.first().url)
   fs.writeFileSync('./data/memelist.json', JSON.stringify(memelist))
 })
-client.login(env.token)
