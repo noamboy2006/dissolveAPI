@@ -29,41 +29,105 @@
           <ul>
             <li class="sidebar-dropdown">
               <a href="#">
-                  <span class="menu-text">Dashboard</span>
+                  <span class="menu-text">Introduction</span>
               </a>
               <div class="sidebar-submenu">
                   <ul>
                       <li>
-                          <a href="#">Dashboard 1</a>
+                          <a href="#">Base URL</a>
                       </li>
                       <li>
-                          <a href="#">Dashboard 2</a>
-                      </li>
-                      <li>
-                          <a href="#">Dashboard 3</a>
+                          <a href="#">Requset Method</a>
                       </li>
                   </ul>
               </div>
             </li>
             <li class="sidebar-dropdown">
               <a href="#">
-                  <span class="menu-text">Introduction</span>
+                  <span class="menu-text">Constant API</span>
               </a>
+              <div class="sidebar-submenu">
+                <ul>
+                    <li>
+                        <a href="#">Constant List</a>
+                    </li>
+                    <li>
+                        <a href="#">Query Parameters</a>
+                    </li>
+                </ul>
+            </div>
           </li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- sidebar-wrapper  -->
-    <main class="page-content">
+    <main id='dissolveAPI' class="page-content">
       <div class="container-fluid">
         <h1>dissolveAPI docs</h1>
         <hr class='border'>
           <div class="row form-group col-md-12 card">
-            <h3 class='card-title'><b>introduction</b></h3>
+            <h2 class='card-title' id='Introduction'><b>Introduction</b></h2>
             <div class='card-text'>
-              dissolveAPI is an API that provides many useless things.<br>
+              dissolveAPI is a restAPI that provides many useless things.<br>
               dissolveAPI has two main features, <b>mathmatical constants</b> & <b>programming memes</b>.<br>
+            </div>
+            <h4 class='subtitle' id='Base_URL'><b>Base URL</b></h4>
+            <div class='table-container'>
+              <table class="table table-hover table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">type</th>
+                    <th scope="col">url</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>the very base URL</td>
+                    <td>http://dissolve.kro.kr:8080/api</td>
+                  </tr>
+                  <tr>
+                    <td>constant API</td>
+                    <td>http://dissolve.kro.kr:8080/api/const</td>
+                  </tr>
+                  <tr>
+                    <td>meme API</td>
+                    <td>http://dissolve.kro.kr:8080/api/meme</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h4 class='subtitle' id='Request_Method'><b>Request Method</b></h4>
+              dissolveAPI only handles GET requests.
+          </div>
+          <hr class='border'>
+          <div class="row form-group col-md-12 card">
+            <h2 class='card-title' id='Constant_API'><b>Constant API</b></h2>
+            <div class='card-text'>
+              this API provides value of various mathematical constants.
+            </div>
+            <h4 class='subtitle' id='Constant_List'><b>Constant list</b></h4>
+            <table class="table table-hover table-dark">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Constant Name</th>
+                  <th scope="col">Max Digits After The Decimal Point</th>
+                  <th scope="col">Digits before The Decimal Point</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>π</td>
+                  <td>PI</td>
+                  <td>10,000,000</td>
+                  <td>1</td>
+                </tr>
+              </tbody>
+            </table>
+            <h4 class='subtitle' id='Query_Parameters'><b>Query Parameters</b></h4>
+            <div class='sub'>
+              dissolveAPI only handles GET requests.
             </div>
           </div>
       </div>

@@ -1,5 +1,5 @@
 # dissolveAPI
-dissolveAPI is an API that provides many useless things.
+dissolveAPI is an restAPI that provides many useless things.
 
 file moduling helped by PMH
 used site template made by azouaoui-med

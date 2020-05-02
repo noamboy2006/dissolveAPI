@@ -18,6 +18,10 @@ app.use('/docs', express.static(path + '/docs'))
 app.get('/api/const', constRouter)
 app.get('/api/meme', memeRouter)
 
+app.get('/api', (_req, res) => {
+  res.send('non-provided feature')
+})
+
 app.use(fallback)
 
 app.listen(8080)

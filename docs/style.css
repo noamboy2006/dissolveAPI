@@ -440,3 +440,25 @@ body {
 h1{
   font-weight: 700;
 }
+
+.subtitle{
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+th, td, tr{
+  border: 1px solid #ffffff77!important;
+}
+
+table{
+  border-radius: 10px!important;
+}
+
+.sub{
+  margin-left: 10px;
+}
+
+*{
+  scroll-behavior: smooth;
+}
