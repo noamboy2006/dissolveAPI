@@ -54,6 +54,9 @@
                     <li>
                         <a href="#">Query Parameters</a>
                     </li>
+                    <li>
+                        <a href="#">Examples</a>
+                    </li>
                 </ul>
             </div>
           </li>
@@ -123,11 +126,90 @@
                   <td>10,000,000</td>
                   <td>1</td>
                 </tr>
+                <tr>
+                  <td>e</td>
+                  <td>E</td>
+                  <td>10,000,000</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>&#8730;2</td>
+                  <td>sqrt2</td>
+                  <td>10,000,000</td>
+                  <td>1</td>
+                </tr>
               </tbody>
             </table>
             <h4 class='subtitle' id='Query_Parameters'><b>Query Parameters</b></h4>
             <div class='sub'>
-              dissolveAPI only handles GET requests.
+              <table class="table table-hover table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Parameter name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">type</th>
+                    <th scope="col">Is Required</th>
+                    <th scope="col">Default Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>type</td>
+                    <td>name of the constant that is requested</td>
+                    <td>a string that is written at the Constant Name section of <a href='#Constant_List'>Constant list</a></td>
+                    <td>TRUE</td>
+                    <td>None, Required</td>
+                  </tr>
+                  <tr>
+                    <td>start</td>
+                    <td>the starting digit after the decimal point. if 0, the response includes number before the </td>
+                    <td>integer</td>
+                    <td>FALSE</td>
+                    <td>0, give value from before the decimal point.</td>
+                  </tr>
+                  <tr>
+                    <td>end</td>
+                    <td>the ending digit after the decimal point.</td>
+                    <td>FALSE</td>
+                    <td>start, give only one value.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h4 class='subtitle' id='Query_Parameters'><b>Examples</b></h4>
+            <div class='sub'>
+              <table class="table table-hover table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Parameter name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Is Required</th>
+                    <th scope="col">Default Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>request URL</td>
+                    <td>response</td>
+                  </tr>
+                  <tr>
+                    <td>http://dissolve.kro.kr:8080/api/const/?type=PI&end=5</td>
+                    <td>3.14159</td>
+                  </tr>
+                  <tr>
+                    <td>http://dissolve.kro.kr:8080/api/const/?type=some_weird_constant_that_we_dont_suupport</td>
+                    <td>Error: not found that type</td>
+                  </tr>
+                  <tr>
+                    <td>http://dissolve.kro.kr:8080/api/const/?type=e&start=1</td>
+                    <td>Error: not found that type</td>
+                  </tr>
+                  <tr>
+                    <td>http://dissolve.kro.kr:8080/api/const/?type=some_weird_constant_that_we_dont_suupport</td>
+                    <td>Error: not found that type</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
       </div>

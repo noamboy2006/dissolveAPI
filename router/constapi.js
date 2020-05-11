@@ -17,12 +17,10 @@ function route (req, res) {
 
   // Search
   const target = consts.find((c) => c.name.toUpperCase() === type)
-  if (!target) return res.send('Error: not found that type')
+  if (!target) return res.send('ERROR: not found that type')
 
   if (start > end) return res.send('ERROR: start is bigger than end')
   if (end > target.end) return res.send('ERROR: request length is too big')
-  if (end - start > Math.pow(10, 6)) return res.send('ERROR: request size is too big')
-
   if (start) start += target.int
   if (end) end += target.int
 
